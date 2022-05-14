@@ -17,7 +17,7 @@ namespace WindowsFormsApplication1
             _pathToUserFile = "Users.txt";
 
             if (!File.Exists(_pathToUserFile))
-                File.CreateText(_pathToUserFile);
+                File.CreateText(_pathToUserFile).Close();
 
             _users = new List<User>();
             TryLoadData();
