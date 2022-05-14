@@ -144,10 +144,10 @@ namespace WindowsFormsApplication1
             _dispatchTime.Value = new DateTime(
                 date.Value.Year,
                 date.Value.Month,
-                _random.Next(date.MinDate.Day,date.MaxDate.Day),
-                _random.Next(date.MinDate.Hour, date.MaxDate.Hour),
-                _random.Next(date.MinDate.Minute, date.MaxDate.Minute),
-                _random.Next(date.MinDate.Second, date.MaxDate.Second));
+                _random.Next(date.Value.Day,DateTime.DaysInMonth(date.Value.Year,date.Value.Month)),
+                _random.Next(date.Value.Hour, date.MaxDate.Hour),
+                _random.Next(date.Value.Minute, date.MaxDate.Minute),
+                _random.Next(date.Value.Second, date.MaxDate.Second));
             _arrivalTime.Value = date.Value;
         }
 
